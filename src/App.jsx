@@ -6,6 +6,7 @@ import Menu from './components/Menu'
 import About from './components/About'
 import Contacts from './components/Contacts'
 import Footer from './components/Footer'
+import Hamburger from './components/Hamburger'
 
 function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -26,6 +27,7 @@ function App() {
   return (
     <>
       <Navbar />
+      {/* <Hamburger /> */ }
       <Routes>
         <Route exact path="/" element={ <Home /> } />
         <Route path="/menu" element={ <Menu /> } />
