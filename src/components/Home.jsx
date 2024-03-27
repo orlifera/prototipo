@@ -18,12 +18,25 @@ function Home() {
                 </div>
             </div>
             <div id="gallery-div">
-                <h2 id='gallery-title'>Here is the restaurant gallery!</h2>
-                <img src={counter} alt="view of the counter" />
-                <img src={tables} alt="view of the tables" />
-                <img src={pasta} alt="view of a plate of pasta" />
+                <div id="gallery-text">
+                    <h2 id='gallery-title'>Scopri il nostro ristorante!</h2>
+                    <Link to="/gallery" id="gallery-btn" className='home-btn'>Vedi la galleria completa</Link>
+                </div>
+                <img className='gallery-img' src={counter} alt="view of the counter" />
+                <img className='gallery-img' src={tables} alt="view of the tables" />
+                <img className='gallery-img' src={pasta} alt="view of a plate of pasta" />
             </div>
-            <div id="newsletter"></div>
+            <hr></hr>
+            <div id="newsletter-div">
+                <div id='newsletter-text'>
+                    <h2 id="newsletter-title">Entra a far parte della nostra famiglia</h2>
+                    <p class="newsletter-subtitle">Registrati e riceverai le <span lang="en">newsletter</span> riguardanti eventi e molto altro!</p>
+                </div>
+                <form id="newsletter-form" method="post">
+                    <input type="email" placeholder="mario.rossi@gmail.com" required id="form-email" name='form-email' aria-label="Email"/>
+                    <button id="newsletter-btn" className='home-btn' type="submit">Avvisami</button>
+                </form>
+            </div>
         </>
     )
 }
