@@ -239,10 +239,31 @@ a:hover:not(.card a, .playlist-link, header a) {
 
 /**CONTACTS**/
 
+.contact-options {
+  list-style: none;
+  text-align: start;
+}
+
+.contact-options li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  text-align: left;
+}
+
+.contact-options li:hover {
+  color: var(--text-200);
+}
+
 .icon {
   fill: var(--text-100);
   vertical-align: middle;
   margin: .5em;
+}
+
+.icon:hover {
+  fill: var(--text-200);
 }
 
 .title,
@@ -256,9 +277,13 @@ a:hover:not(.card a, .playlist-link, header a) {
 .contact-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 10em;
+  grid-gap: 3em;
   height: 100dvh;
   padding: 1em;
+}
+
+.form-container {
+  display: block;
 }
 
 #contact-form {
@@ -273,14 +298,18 @@ a:hover:not(.card a, .playlist-link, header a) {
 #contact-form input {
   color: var(--text-100);
   width: 80%;
-  height: 3em;
+  height: 2em;
   display: block;
+  margin-bottom: .75em;
   background-color: var(--bg-200);
   outline: none;
   border: none;
+  font-size: 1.2em;
 }
 
-
+#contact-form input::placeholder {
+  color: grey;
+}
 
 #contact-form textarea {
   width: 80%;
@@ -291,13 +320,56 @@ a:hover:not(.card a, .playlist-link, header a) {
 
 #contact-form fieldset {
   border: none;
+  padding: 1em;
 }
 
 #contact-form button:not(.submit) {
-  background-color: var(--primary-100);
+  background-color: var(--bg-200);
   color: var(--text-100);
+  width: 5em;
+  height: 2.9em;
   border: none;
-  padding: 1em 2em;
+  outline: none;
+}
+
+#phone-input {
+  width: 100%;
+}
+
+div#phone-input input {
+  width: calc(80% - 3em);
+}
+
+#contact-form textarea {
+  width: 80%;
+  height: 5em;
+  border: none;
+  outline: none;
+  background-color: var(--bg-200);
+  color: var(--text-100);
+}
+
+#contact-form textarea::placeholder {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.name,
+.surname {
+  width: 44.7%;
+  display: inline-block;
+}
+
+#contact-form button.submit {
+  background-color: var(--primary-100);
+  display: block;
+  margin-left: 1.5em;
+  color: var(--text-100);
+  width: 20%;
+  height: 3em;
+  border: none;
+  outline: none;
   cursor: pointer;
-  border-radius: 20px;
 }
