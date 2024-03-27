@@ -1,8 +1,11 @@
 import React from 'react'
+import Bike from '../animations/Bike'
 
 function Home() {
     return (
-        <div>Home</div>
+        <div>
+            <Bike />
+        </div>
     )
 }
 
