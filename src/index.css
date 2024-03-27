@@ -251,58 +251,53 @@ a:hover:not(.card a, .playlist-link, header a) {
   color: var(--text-100);
 }
 
-.contacts-container {
-  display: flex;
-}
+/* ContactPage.css */
 
-.contact-options {
-  list-style: none;
-}
-
-.form,
-.map {
-  flex: 1;
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10em;
+  height: 100dvh;
+  padding: 1em;
 }
 
 #contact-form {
   width: 100%;
+}
+
+#contact-form label {
   color: var(--text-100);
+  font-size: 1.2em;
 }
-
-
-fieldset {
-  border: none;
-}
-
-fieldset:not(:last-child) {
-  margin-bottom: 2em;
-}
-
-#general {
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-}
-
-#contatti {
-  display: block;
-  align-items: center;
-  justify-content: center;
-}
-
-#contatti input {
-  display: block;
-  width: 80%;
-}
-
 
 #contact-form input {
-  width: 80%;
-  padding: 1em;
-  margin: .5em 0;
-  border: none;
-  border-radius: 10px;
-  background-color: var(--bg-200);
   color: var(--text-100);
+  width: 80%;
+  height: 3em;
+  display: block;
+  background-color: var(--bg-200);
+  outline: none;
+  border: none;
+}
+
+
+
+#contact-form textarea {
+  width: 80%;
+  height: 5em;
+  display: block;
+  resize: none;
+}
+
+#contact-form fieldset {
+  border: none;
+}
+
+#contact-form button:not(.submit) {
+  background-color: var(--primary-100);
+  color: var(--text-100);
+  border: none;
+  padding: 1em 2em;
+  cursor: pointer;
+  border-radius: 20px;
 }

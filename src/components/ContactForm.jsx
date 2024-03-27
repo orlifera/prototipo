@@ -8,6 +8,24 @@ function ContactForm() {
     const [phone, setPhone] = useState('')
     const phoneUtil = PhoneNumberUtil.getInstance();
 
+    // const getStyle = () => {
+    //     // Define styles based on the current theme
+    //     if (theme === 'dark') {
+    //         return {
+    //             // Dark theme styles
+    //             '--react-international-phone-border-radius': 0,
+    //             // Add more styles specific to dark theme if needed
+    //         };
+    //     } else {
+    //         return {
+    //             // Light theme styles
+    //             '--react-international-phone-border-radius': 10,
+    //             // Add more styles specific to light theme if needed
+    //         };
+
+    //     }
+    // };
+
     const isPhoneValid = (phone) => {
         try {
             return phoneUtil.isValidNumber(phoneUtil.parseAndKeepRawInput(phone));
@@ -19,7 +37,7 @@ function ContactForm() {
     const isValid = isPhoneValid(phone);
 
     return (
-        <>
+        <div className='form-container'>
             <h1 className='title'>Contattaci</h1>
             <p className='paragraph'>Il nostro team è qua per ogni tua evenienza. Inizia la live chat, apri un ticket o mandaci direttamente una mail in base alle tue esigenze. Altrimenti, chiamaci!</p>
             <ul className='contact-options'>
@@ -53,15 +71,18 @@ function ContactForm() {
                     <legend hidden>Contatti</legend>
                     <label htmlFor="email" placeholder='La tua mail'>Email</label>
                     <input type="email" id="email" name="email" required />
-                    <label htmlFor="phone" >Telefono</label>
-                    <PhoneInput
-                        defaultCountry='it'
-                        value={ phone }
-                        onChange={ setPhone }
-                        placeholder='Il tuo numero di telefono'
+                    <div className='phone-input'>
+                        <label htmlFor="phone" >Telefono</label>
+                        <PhoneInput
+                            defaultCountry='it'
+                            value={ phone }
+                            onChange={ setPhone }
+                            placeholder='Il tuo numero di telefono'
+                        // style={ { getStyle }
 
-                    />
-                    { !isValid && <div style={ { color: 'red' } }>Phone is not valid</div> }
+                        />
+                        { !isValid && <div style={ { color: 'red' } }>Phone is not valid</div> }
+                    </div>
                 </fieldset>
                 <fieldset>
                     <legend hidden>Messaggio</legend>
@@ -71,11 +92,12 @@ function ContactForm() {
                 <button
                     disabled={ !isValid }
                     type="submit"
+                    className='submit'
                 >
                     Submit
                 </button>
             </form>
-        </>
+        </div>
     )
 }
 
