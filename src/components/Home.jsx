@@ -11,7 +11,7 @@ function Home() {
             <div id="home">
                 <img id='welcome-img' src={welcome} alt='complete restaurant view'></img>
                 <div id='welcome-text'>
-                    <h1 id='welcome-title'>Benvenuti da ...</h1>
+                    <h1 id='welcome-title'>Benvenuti al <span className="special">Sinna Social Club</span></h1>
                     <p id="welcome-description">Dove ti puoi sentire a casa</p>
                     <Link to="/about" id='about-btn' className='home-btn'>Chi siamo</Link>
                     <Link to="/menu" id='menu-btn' className='home-btn'>Scopri il menù</Link>

@@ -64,6 +64,10 @@ html {
   line-height: 1.5em;
 }
 
+.special {
+  color: var(--rosa-sinna)
+}
+
 #logo img {
   width: 3em;
   height: 3em;
