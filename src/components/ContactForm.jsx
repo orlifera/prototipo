@@ -8,23 +8,23 @@ function ContactForm() {
     const [phone, setPhone] = useState('')
     const phoneUtil = PhoneNumberUtil.getInstance();
 
-    // const getStyle = () => {
-    //     // Define styles based on the current theme
-    //     if (theme === 'dark') {
-    //         return {
-    //             // Dark theme styles
-    //             '--react-international-phone-border-radius': 0,
-    //             // Add more styles specific to dark theme if needed
-    //         };
-    //     } else {
-    //         return {
-    //             // Light theme styles
-    //             '--react-international-phone-border-radius': 10,
-    //             // Add more styles specific to light theme if needed
-    //         };
+    const getStyle = () => {
+        // Define styles based on the current theme
+        if (theme === 'dark') {
+            return {
+                // Dark theme styles
+                '--react-international-phone-border-radius': 0,
+                // Add more styles specific to dark theme if needed
+            };
+        } else {
+            return {
+                // Light theme styles
+                '--react-international-phone-border-radius': 10,
+                // Add more styles specific to light theme if needed
+            };
 
-    //     }
-    // };
+        }
+    };
 
     const isPhoneValid = (phone) => {
         try {
