@@ -113,14 +113,35 @@ html {
 
 #menu ul li {
   width: 7em;
+  height: 2em;
   min-width: 5em;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#menu ul li:not(:last-child) {
+#menu ul li:not(:last-child, :nth-child(4)) {
   border-right: 1px solid var(--accent-100);
+}
+
+#menu ul li a {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease, border-bottom 0.3s ease;
+}
+
+#menu ul li a:hover {
+  background-color: var(--bg-100);
+  color: var(--text-100);
+  border-bottom: 2px solid var(--primary-100);
+}
+
+#menu ul li a.active {
+  background-color: var(--bg-100);
+  border-bottom: 2px solid var(--primary-100);
 }
 
 a:not(header a) {
