@@ -395,6 +395,19 @@ div#phone-input input {
   cursor: pointer;
 }
 
+
+/**MAP**/
+
+.map-container {
+  height: 100%;
+  width: 100%;
+}
+
+.map-container div {
+  height: 70%;
+  width: 100%;
+}
+
 /* MotorbikeAnimation.css */
 .motorbike-container {
   position: relative;
