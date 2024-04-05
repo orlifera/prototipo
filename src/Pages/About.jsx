@@ -51,7 +51,7 @@ function About() {
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dignissim eget ligula dignissim eleifend. Etiam dignissim justo ac mauris dapibus, et consequat odio porttitor.</p>
                     </div>
                     <div className="aboutus_box_hero_right">
-                        <img src={imgProva} width={500} height={500} alt="About Us" />
+                        <img src={ imgProva } width={ 500 } height={ 500 } alt="About Us" />
                     </div>
                 </div>
 
@@ -62,17 +62,17 @@ function About() {
 
                 <div className="aboutus_box_founder">
                     <div className="aboutus_box_founder_box">
-                        {peopleArray.map((person, index) => (
+                        { peopleArray.map((person, index) => (
                             <div className="aboutus_box_founder_box_image">
-                                <img src={person.image} 
-                                    alt={person.name}
-                                    width={500} 
-                                    height={500} 
-                                    className='aboutus_box_founder_box_image_img'/>
-                                <h3>{person.name}</h3>
-                                <p>{person.title}</p>
+                                <img src={ person.image }
+                                    alt={ person.name }
+                                    width={ 500 }
+                                    height={ 500 }
+                                    className='aboutus_box_founder_box_image_img' />
+                                <h3>{ person.name }</h3>
+                                <p>{ person.title }</p>
                             </div>
-                        ))}
+                        )) }
                     </div>
                 </div>
 
@@ -83,12 +83,12 @@ function About() {
 
                 <div className="aboutus_box_facts">
                     <div className="aboutus_box_facts_box">
-                        {factsArray.map((fact, index) => (
+                        { factsArray.map((fact, index) => (
                             <div className="aboutus_box_facts_box_info">
-                                <h3>{fact.title}</h3>
-                                <p>{fact.description}</p>
+                                <h3>{ fact.title }</h3>
+                                <p>{ fact.description }</p>
                             </div>
-                        ))}
+                        )) }
                     </div>
                 </div>
 
