@@ -151,7 +151,7 @@ html {
 
 #menu ul li a.active {
   background-color: var(--bg-100);
-  border-bottom: 2px solid var(--primary-100);
+  border-bottom: 2px solid var(--text-200);
 }
 
 a:not(header a) {
@@ -379,6 +379,7 @@ hr {
 
 #newsletter-title {
   font-size: 2em;
+  color: var(--text-100);
 }
 
 #newsletter-subtitle {
@@ -668,7 +669,6 @@ div#phone-input input {
 
 .aboutus_box_founder_box_image {
   background-color: var(--primary-300);
-  color: var(--primary-200);
   padding: 1rem;
   border-radius: 1rem;
 }
@@ -678,6 +678,7 @@ div#phone-input input {
 }
 
 .aboutus_box_founder_box_image h3 {
+  color: var(--text-100);
   line-height: 0;
   font-size: 2rem;
 }
@@ -704,6 +705,7 @@ div#phone-input input {
 .aboutus_box_facts_box_info h3 {
   font-size: 4rem;
   line-height: 0;
+  color: var(--text-100);
 }
 
 
@@ -754,13 +756,14 @@ h2 {
   text-align: center;
   margin-top: .5em;
   text-align: center;
-  color: var(--text-100);
+  color: var(--primary-300);
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .card {
+  background-color: var(--bg-200);
   display: flex;
   align-items: space-between;
   width: 30%;
@@ -774,13 +777,9 @@ h2 {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-h3 {
-  color: #f1356d;
-
-}
 
 p {
-  color: var(--text-300);
+  color: var(--text-100);
 }
 
 .card img {
