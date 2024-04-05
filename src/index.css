@@ -632,6 +632,20 @@ div#phone-input input {
   overflow-x: auto;
 }
 
+.aboutus_box_founder_box::-webkit-scrollbar {
+  width: 10px;
+  border-left: .5px solid #999;
+}
+
+.aboutus_box_founder_box::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+.aboutus_box_founder_box::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 
 
 .aboutus_box_founder_box_image {
