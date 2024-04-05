@@ -19,7 +19,7 @@ function Home() {
             </div>
             <div id="gallery-div">
                 <div id="gallery-text">
-                    <h2 id='gallery-title'>Scopri il nostro ristorante!</h2>
+                    {/* <h2 id='gallery-title'>Scopri il nostro ristorante!</h2> */ }
                     <Link to="/gallery" id="gallery-btn" className='home-btn'>Vedi la galleria completa</Link>
                 </div>
                 <img className='gallery-img' src={ counter } alt="bancone del ristorante" />
