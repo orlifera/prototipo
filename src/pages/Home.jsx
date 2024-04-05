@@ -9,7 +9,7 @@ function Home() {
     return (
         <>
             <div id="home">
-                <img id='welcome-img' src={welcome} alt='complete restaurant view'></img>
+                <img id='welcome-img' src={ welcome } alt='complete restaurant view'></img>
                 <div id='welcome-text'>
                     <h1 id='welcome-title'>Benvenuti al <span className="special">Sinna Social Club</span></h1>
                     <p id="welcome-description">Dove ti puoi sentire a casa</p>
@@ -22,9 +22,9 @@ function Home() {
                     <h2 id='gallery-title'>Scopri il nostro ristorante!</h2>
                     <Link to="/gallery" id="gallery-btn" className='home-btn'>Vedi la galleria completa</Link>
                 </div>
-                <img className='gallery-img' src={counter} alt="bancone del ristorante" />
-                <img className='gallery-img' src={tables} alt="vista dei tavoli" />
-                <img className='gallery-img' src={pasta} alt="piatto di pasta" />
+                <img className='gallery-img' src={ counter } alt="bancone del ristorante" />
+                <img className='gallery-img' src={ tables } alt="vista dei tavoli" />
+                <img className='gallery-img' src={ pasta } alt="piatto di pasta" />
             </div>
             <hr></hr>
             <div id="newsletter-div">
@@ -33,7 +33,7 @@ function Home() {
                     <p class="newsletter-subtitle">Registrati e riceverai le <span lang="en">newsletter</span> riguardanti eventi e molto altro!</p>
                 </div>
                 <form id="newsletter-form" method="post">
-                    <input type="email" placeholder="mario.rossi@gmail.com" required id="form-email" name='form-email' aria-label="Email"/>
+                    <input type="email" placeholder="mario.rossi@gmail.com" required id="form-email" name='form-email' aria-label="Email" />
                     <button id="newsletter-btn" className='home-btn' type="submit">Avvisami</button>
                 </form>
             </div>

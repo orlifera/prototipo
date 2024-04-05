@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Switch from './Switch'
 import MobileNav from './MobileNav';
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import sinna from '../assets/images/sinna_logo.jpeg'
 
 
@@ -24,26 +24,26 @@ function bar() {
                     <img src={ sinna } />
                 </a>
                 <ul>
-                    <li>
-                        <Link to="/">Home</Link>
+                    <li className='first'>
+                        <NavLink exact to="/" activeClassName="active">Home</NavLink>
                     </li>
                     <li>
-                        <Link to="/menu">Menu</Link>
+                        <NavLink to="/menu" activeClassName="active">Menu</NavLink>
                     </li>
                     <li>
-                        <Link to="/about">Chi Siamo</Link>
+                        <NavLink to="/about" activeClassName="active">Chi Siamo</NavLink>
                     </li>
-                    <li>
-                        <Link to="/contact">Contatti</Link>
+                    <li >
+                        <NavLink to="/contact" activeClassName="active">Contatti</NavLink>
                     </li>
+                    <li className='slide'></li>
                 </ul>
-
                 <ul>
                     <li className="switch">
                         <Switch />
                     </li>
                 </ul>
-            </nav >
+            </nav>
         )
     } else {
         return (

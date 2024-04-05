@@ -22,6 +22,9 @@
   /* Preserved */
   --text-200: #8d6388;
   /* Darker shade of rosa-sinna */
+  /* Preserved */
+  --text-200: #8d6388;
+  /* Darker shade of rosa-sinna */
   --text-300: #6b6b6b;
   /* Preserved */
   --bg-100: #f7e6f0;
@@ -31,6 +34,9 @@
   --bg-300: #ffa9e6;
   /* Preserved as rosa-sinna */
   --link-hover: #f9f9f9;
+  /* Preserved */
+
+
   /* Preserved */
 
 
@@ -117,14 +123,35 @@ html {
 
 #menu ul li {
   width: 7em;
+  height: 2em;
   min-width: 5em;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#menu ul li:not(:last-child) {
+#menu ul li:not(:last-child, :nth-child(4)) {
   border-right: 1px solid var(--accent-100);
+}
+
+#menu ul li a {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease, border-bottom 0.3s ease;
+}
+
+#menu ul li a:hover {
+  background-color: var(--bg-100);
+  color: var(--text-100);
+  border-bottom: 2px solid var(--primary-100);
+}
+
+#menu ul li a.active {
+  background-color: var(--bg-100);
+  border-bottom: 2px solid var(--primary-100);
 }
 
 a:not(header a) {
@@ -273,6 +300,7 @@ a:hover:not(.card a, .playlist-link, header a) {
 
 #welcome-description {
   font-size: 2em;
+  color: white;
 }
 
 .home-btn {
@@ -335,40 +363,40 @@ hr {
 }
 
 #newsletter-div {
-    padding: 2em 0;
-    width: 100%;
+  padding: 2em 0;
+  width: 100%;
 }
 
 #newsletter-text {
-    text-align: right;
-    width: 90%;
-    color: var(--text-100)
+  text-align: right;
+  width: 90%;
+  color: var(--text-100)
 }
 
 #newsletter-form {
-    text-align: right;
-    width: 90%;
+  text-align: right;
+  width: 90%;
 }
 
 #newsletter-title {
-    font-size: 2em;
+  font-size: 2em;
 }
 
 #newsletter-subtitle {
-    font-size: 1em;
+  font-size: 1em;
 }
 
 #newsletter-form #form-email {
-    font-size: 1em;
-    width: 23em;
-    padding: .4em;
-    margin-right: 2em;
+  font-size: 1em;
+  width: 23em;
+  padding: .4em;
+  margin-right: 2em;
 }
 
 #newsletter-btn {
-    padding: .7em 3em;
-    margin: unset;
-    margin-right: 0.4em
+  padding: .7em 3em;
+  margin: unset;
+  margin-right: 0.4em
 }
 
 #hr-footer {
@@ -379,4 +407,400 @@ footer p {
   text-align: center;
   padding-bottom: 1em;
   color: var(--text-100)
+}
+
+/**CONTACTS**/
+
+.contact-options {
+  list-style: none;
+  text-align: start;
+}
+
+.contact-options li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  text-align: left;
+}
+
+.contact-options li:hover {
+  color: var(--text-200);
+}
+
+.icon {
+  fill: var(--text-100);
+  vertical-align: middle;
+  margin: .5em;
+}
+
+.icon:hover {
+  fill: var(--text-200);
+}
+
+.title,
+.paragraph {
+  text-align: center;
+  color: var(--text-100);
+}
+
+/* ContactPage.css */
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3em;
+  height: 100dvh;
+  padding: 1em;
+}
+
+.form-container {
+  display: block;
+}
+
+#contact-form {
+  width: 100%;
+}
+
+#contact-form label {
+  color: var(--text-100);
+  font-size: 1.2em;
+}
+
+#contact-form input {
+  color: var(--text-100);
+  width: 80%;
+  height: 2em;
+  display: block;
+  margin-bottom: .75em;
+  background-color: var(--bg-200);
+  outline: none;
+  border: none;
+  font-size: 1.2em;
+}
+
+#contact-form input::placeholder {
+  color: grey;
+}
+
+#contact-form textarea {
+  width: 80%;
+  height: 5em;
+  display: block;
+  resize: none;
+}
+
+#contact-form fieldset {
+  border: none;
+  padding: 1em;
+}
+
+#contact-form button:not(.submit) {
+  background-color: var(--bg-200);
+  color: var(--text-100);
+  width: 5em;
+  height: 2.9em;
+  border: none;
+  outline: none;
+}
+
+#phone-input {
+  width: 100%;
+}
+
+div#phone-input input {
+  width: calc(80% - 3em);
+}
+
+#contact-form textarea {
+  width: 80%;
+  height: 5em;
+  border: none;
+  outline: none;
+  background-color: var(--bg-200);
+  color: var(--text-100);
+}
+
+#contact-form textarea::placeholder {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.name,
+.surname {
+  width: 44.7%;
+  display: inline-block;
+}
+
+#contact-form button.submit {
+  background-color: var(--primary-100);
+  display: block;
+  margin-left: 1.5em;
+  color: var(--text-100);
+  width: 20%;
+  height: 3em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+
+/**MAP**/
+
+.map-container {
+  height: 100%;
+  width: 100%;
+}
+
+.map-container div {
+  height: 70%;
+  width: 100%;
+}
+
+/* MotorbikeAnimation.css */
+.motorbike-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  /* Adjust height as needed */
+}
+
+.motorbike {
+  width: 100%;
+  /* Initially position the motorbike outside the left edge */
+  animation: motorbikeAnimation 2s linear infinite;
+  /* Animation duration and timing */
+}
+
+
+
+@keyframes motorbikeAnimation {
+  0% {
+    transform: translateX(-100%);
+    /* Initial position */
+  }
+
+  100% {
+    transform: translateX(100%);
+    /* Move to the right edge of the container */
+  }
+}
+
+
+
+
+/* About */
+.aboutus {
+  width: 100%;
+  margin-block: 5rem;
+}
+
+.aboutus_box {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.aboutus_box_hero {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  align-items: center;
+  gap: 3rem;
+}
+
+.aboutus_box_hero_left h1 {
+  font-size: 3rem;
+  line-height: .5;
+  color: var(--accent-100);
+}
+
+.aboutus_box_hero_left p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: var(--text-100)
+}
+
+.aboutus_box_title {
+  margin-top: 5rem;
+}
+
+.aboutus_box_title p {
+  color: var(--text-100);
+}
+
+.aboutus_box_title h2 {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.aboutus_box_title p {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  width: 40%;
+}
+
+.aboutus_box_founder {
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+}
+
+.aboutus_box_founder_box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  overflow-x: auto;
+}
+
+
+
+.aboutus_box_founder_box_image {
+  background-color: var(--primary-300);
+  color: var(--primary-200);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.aboutus_box_founder_box_image_img {
+  border-radius: 1rem;
+}
+
+.aboutus_box_founder_box_image h3 {
+  line-height: 0;
+  font-size: 2rem;
+}
+
+.aboutus_box_founder_box_image p {
+  line-height: 0;
+  font-size: 1.2rem;
+}
+
+.aboutus_box_facts_box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.aboutus_box_facts_box_info {
+  background-color: var(--primary-300);
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  color: var(--primary-200);
+}
+
+.aboutus_box_facts_box_info h3 {
+  font-size: 4rem;
+  line-height: 0;
+}
+
+
+
+@media screen and (max-width: 35em) {
+  .aboutus_box {
+    width: 90%;
+  }
+
+  .aboutus_box_hero {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutus_box_founder {
+    margin-top: 5rem;
+  }
+
+  .aboutus_box_founder_box {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .aboutus_box_title p {
+    width: 100%;
+  }
+
+  .aboutus_box_facts_box {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+
+  .aboutus_box_facts_box_info h3 {
+    font-size: 2rem;
+  }
+}
+
+/**MENU**/
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+h2 {
+  text-align: center;
+  margin-top: .5em;
+  text-align: center;
+  color: var(--text-100);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card {
+  display: flex;
+  align-items: space-between;
+  width: 30%;
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 4em;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+  color: #f1356d;
+
+}
+
+p {
+  color: var(--text-300);
+}
+
+.card img {
+  width: 40%;
+  height: auto;
+}
+
+.card-info {
+  padding: 20px;
+}
+
+.card-info h3 {
+  margin-top: 0;
+}
+
+.card-info p {
+  margin: 5px 0;
+}
+
+
+@media screen and (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    /* Cambia la direzione del flexbox in colonna */
+  }
+
+  .card {
+    width: 80%;
+  }
+
+  .card img {
+    width: 50%;
+    height: auto;
+  }
 }
