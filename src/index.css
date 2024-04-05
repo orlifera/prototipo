@@ -8,7 +8,6 @@
   --logo: invert(1);
 
 
-  --rosa-sinna: #ffa9e6;
   --primary-100: #f8d7ee;
   /* Lighter shade of rosa-sinna */
   --primary-200: #fcc3e0;
@@ -23,15 +22,21 @@
   /* Preserved */
   --text-200: #8d6388;
   /* Darker shade of rosa-sinna */
+  /* Preserved */
+  --text-200: #8d6388;
+  /* Darker shade of rosa-sinna */
   --text-300: #6b6b6b;
   /* Preserved */
-  --bg-100: #f9f9f9;
+  --bg-100: #f7e6f0;
   /* Lighter shade with rosa-sinna influence */
   --bg-200: #fac3e0;
   /* Slightly darker bg with rosa-sinna influence */
   --bg-300: #ffa9e6;
   /* Preserved as rosa-sinna */
   --link-hover: #f9f9f9;
+  /* Preserved */
+
+
   /* Preserved */
 
 
@@ -82,6 +87,10 @@ html {
   background-color: var(--bg-100);
   margin: auto;
   line-height: 1.5em;
+}
+
+.special {
+  color: var(--rosa-sinna)
 }
 
 #logo img {
@@ -260,7 +269,6 @@ a:hover:not(.card a, .playlist-link, header a) {
 }
 
 /* HOME */
-
 #home {
   width: 100%;
   position: relative;
@@ -300,6 +308,7 @@ a:hover:not(.card a, .playlist-link, header a) {
   cursor: pointer;
   margin: 0 2em;
   background-color: var(--rosa-sinna);
+  color: black;
 }
 
 .home-btn:hover {
@@ -332,7 +341,7 @@ a:hover:not(.card a, .playlist-link, header a) {
 
 #gallery-text {
   margin-right: 2em;
-  color: var(--text-100);
+  color: var(--text-100)
 }
 
 .gallery-img {
@@ -349,7 +358,7 @@ a:hover:not(.card a, .playlist-link, header a) {
 }
 
 hr {
-  width: 85em;
+  width: 85%;
 }
 
 #newsletter-div {
@@ -360,7 +369,7 @@ hr {
 #newsletter-text {
   text-align: right;
   width: 90%;
-  color: var(--text-100);
+  color: var(--text-100)
 }
 
 #newsletter-form {
@@ -387,6 +396,16 @@ hr {
   padding: .7em 3em;
   margin: unset;
   margin-right: 0.4em
+}
+
+#hr-footer {
+  width: 95%;
+}
+
+footer p {
+  text-align: center;
+  padding-bottom: 1em;
+  color: var(--text-100)
 }
 
 /**CONTACTS**/

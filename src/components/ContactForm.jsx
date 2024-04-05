@@ -8,23 +8,23 @@ function ContactForm() {
     const [phone, setPhone] = useState('')
     const phoneUtil = PhoneNumberUtil.getInstance();
 
-    const getStyle = () => {
-        // Define styles based on the current theme
-        if (theme === 'dark') {
-            return {
-                // Dark theme styles
-                '--react-international-phone-border-radius': 0,
-                // Add more styles specific to dark theme if needed
-            };
-        } else {
-            return {
-                // Light theme styles
-                '--react-international-phone-border-radius': 10,
-                // Add more styles specific to light theme if needed
-            };
+    // const getStyle = () => {
+    //     // Define styles based on the current theme
+    //     if (theme === 'dark') {
+    //         return {
+    //             // Dark theme styles
+    //             '--react-international-phone-border-radius': 0,
+    //             // Add more styles specific to dark theme if needed
+    //         };
+    //     } else {
+    //         return {
+    //             // Light theme styles
+    //             '--react-international-phone-border-radius': 10,
+    //             // Add more styles specific to light theme if needed
+    //         };
 
-        }
-    };
+    //     }
+    // };
 
     const isPhoneValid = (phone) => {
         try {
@@ -59,26 +59,26 @@ function ContactForm() {
                 <fieldset id='general'>
                     <legend hidden>Info Generali</legend>
                     <div className='name'>
-                        <label htmlFor="name" >Nome</label>
-                        <input type="text" id="name" name="name" placeholder='Il tuo nome' required />
+                        <label htmlFor="name" placeholder='Il tuo nome'>Nome</label>
+                        <input type="text" id="name" name="name" required />
                     </div>
                     <div className='surname'>
-                        <label htmlFor="surname" >Cognome</label>
-                        <input type="text" id="surname" name="surname" placeholder='Il tuo Cognome' required />
+                        <label htmlFor="surname" placeholder='Il tuo Cognome'>Cognome</label>
+                        <input type="text" id="surname" name="surname" required />
                     </div>
                 </fieldset>
                 <fieldset id='contatti'>
                     <legend hidden>Contatti</legend>
-                    <label htmlFor="email" >Email</label>
-                    <input type="email" id="email" name="email" placeholder='La tua mail' required />
-                    <div id='phone-input'>
+                    <label htmlFor="email" placeholder='La tua mail'>Email</label>
+                    <input type="email" id="email" name="email" required />
+                    <div className='phone-input'>
                         <label htmlFor="phone" >Telefono</label>
                         <PhoneInput
                             defaultCountry='it'
                             value={ phone }
                             onChange={ setPhone }
                             placeholder='Il tuo numero di telefono'
-                            style={ { '--react-international-phone-border-radius': 0 } }
+                        // style={ { getStyle }
 
                         />
                         { !isValid && <div style={ { color: 'red' } }>Phone is not valid</div> }
@@ -87,7 +87,7 @@ function ContactForm() {
                 <fieldset>
                     <legend hidden>Messaggio</legend>
                     <label htmlFor="message">Messaggio</label>
-                    <textarea id="message" name="message" placeholder='Di Cosa hai bisogno' required ></textarea>
+                    <textarea id="message" name="message" required placeholder='Di Cosa hai bisogno'></textarea>
                 </fieldset>
                 <button
                     disabled={ !isValid }
