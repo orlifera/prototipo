@@ -100,7 +100,7 @@ function About() {
 // https://www.pinterest.it/pin/907193918676274779/
 // https://www.pinterest.it/pin/831477149973720215/
 
-// wtf
+
 // https://www.youtube.com/watch?v=KkQATIXBY5w
 
 // https://www.youtube.com/watch?v=16LwJGlNcJ0
