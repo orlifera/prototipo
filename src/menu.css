@@ -1,0 +1,138 @@
+:root {
+  --default-transition: color .1s ease-in-out, fill .1s ease-in-out,
+    border-color .3s ease-in-out, transform .3s ease-in-out;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root[data-theme="light"] {
+  --logo: invert(1);
+  --primary-100: #1E2022;
+  --primary-200: #34373b;
+  --primary-300: #b6bbbf;
+  --accent-100: #788189;
+  --accent-200: #e1e4e6;
+  --text-100: #1E2022;
+  --text-200: #887767;
+  --text-300: #6b6b6b;
+  --bg-100: #F0F5F9;
+  --bg-200: #C9D6DF;
+  --bg-300: #bfc7d1;
+  --link-hover: #f9f9f9;
+  --switch-bg-icon: #ffd371;
+  --muted-text: #b1b0b5;
+  --icon-sun: #ee8e44;
+  --icon-moon: #b7b7b7;
+  --switch-pos: .25em;
+  --change: #aa8b52;
+  --change: #396ce2;
+  --sun-display: block;
+  --moon-display: none;
+  --rosa-sinna: #ffa9e6;
+}
+
+
+:root[data-theme="dark"] {
+  --logo: invert(0);
+  --primary-100: #a9a9a9;
+  --primary-200: #808080;
+  --primary-300: #696969;
+  --accent-100: #c0c0c0;
+  --accent-200: #d3d3d3;
+  --text-100: #e1dfdd;
+  --text-200: #766c6c;
+  --text-300: #f9f9f9;
+  --link-hover: #f9f9f9;
+  --bg-100: #262626;
+  --bg-200: #333333;
+  --bg-300: #404040;
+  --link-hover: #030303;
+  --switch-bg-icon: #081d32;
+  --muted-text: #77757E;
+  --icon-sun: var(--muted-text);
+  --icon-moon: #b7b7b7;
+  --switch-pos: 2.7em;
+  --change: #aa8b52;
+  --sun-display: none;
+  --moon-display: block;
+}
+
+html {
+  height: 100dvh;
+  font-size: 100%;
+  background-color: var(--bg-100);
+  margin: auto;
+  line-height: 1.5em;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+h2 {
+  text-align: center;
+  margin-top: .5em;
+  text-align: center;
+  color: var(--text-100);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card {
+  display: flex;
+  align-items: space-between;
+  width: 30%;
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 4em;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+  color: #f1356d;
+
+}
+
+p {
+  color: var(--text-300);
+}
+
+.card img {
+  width: 40%;
+  height: auto;
+}
+
+.card-info {
+  padding: 20px;
+}
+
+.card-info h3 {
+  margin-top: 0;
+}
+
+.card-info p {
+  margin: 5px 0;
+}
+
+
+@media screen and (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    /* Cambia la direzione del flexbox in colonna */
+  }
+
+  .card {
+    width: 80%;
+  }
+
+  .card img {
+    width: 50%;
+    height: auto;
+  }
+}
