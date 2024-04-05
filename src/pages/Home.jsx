@@ -22,9 +22,9 @@ function Home() {
                     <h2 id='gallery-title'>Scopri il nostro ristorante!</h2>
                     <Link to="/gallery" id="gallery-btn" className='home-btn'>Vedi la galleria completa</Link>
                 </div>
-                <img className='gallery-img' src={counter} alt="view of the counter" />
-                <img className='gallery-img' src={tables} alt="view of the tables" />
-                <img className='gallery-img' src={pasta} alt="view of a plate of pasta" />
+                <img className='gallery-img' src={counter} alt="bancone del ristorante" />
+                <img className='gallery-img' src={tables} alt="vista dei tavoli" />
+                <img className='gallery-img' src={pasta} alt="piatto di pasta" />
             </div>
             <hr></hr>
             <div id="newsletter-div">

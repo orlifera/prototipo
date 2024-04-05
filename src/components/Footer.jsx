@@ -2,7 +2,12 @@ import React from 'react'
 
 function Footer() {
     return (
-        <div>Footer</div>
+        <>
+            <hr id='hr-footer'></hr>
+            <footer>
+                <p>Social Sinna Club</p>
+            </footer>
+        </>
     )
 }
 

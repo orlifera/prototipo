@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Home from './components/Home'
-import Menu from './components/Menu'
-import About from './components/About'
-import Contacts from './components/Contacts'
+import Home from './pages/Home'
+import Menu from './pages/Menu'
+import About from './pages/About'
+import Contacts from './pages/Contacts'
 import Footer from './components/Footer'
 import Hamburger from './components/Hamburger'
+import Gallery from './pages/Gallery'
 
 function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -33,6 +34,7 @@ function App() {
         <Route path="/menu" element={ <Menu /> } />
         <Route path="/about" element={ <About /> } />
         <Route path="/contact" element={ <Contacts /> } />
+        <Route path="/gallery" element={ <Gallery /> } />
       </Routes>
       { windowWidth > 768 ? <Footer /> : null }
 
