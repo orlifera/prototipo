@@ -73,6 +73,7 @@
   --change: #aa8b52;
   --sun-display: none;
   --moon-display: block;
+  --rosa-sinna: #ffa9e6;
 }
 
 html {
@@ -290,6 +291,7 @@ a:hover:not(.card a, .playlist-link, header a) {
 
 #welcome-description {
   font-size: 2em;
+  color: white;
 }
 
 .home-btn {
@@ -330,6 +332,7 @@ a:hover:not(.card a, .playlist-link, header a) {
 
 #gallery-text {
   margin-right: 2em;
+  color: var(--text-100);
 }
 
 .gallery-img {
@@ -357,6 +360,7 @@ hr {
 #newsletter-text {
   text-align: right;
   width: 90%;
+  color: var(--text-100);
 }
 
 #newsletter-form {
@@ -588,15 +592,21 @@ div#phone-input input {
 .aboutus_box_hero_left h1 {
   font-size: 3rem;
   line-height: .5;
+  color: var(--accent-100);
 }
 
 .aboutus_box_hero_left p {
   font-size: 1.5rem;
   line-height: 1.5;
+  color: var(--text-100)
 }
 
 .aboutus_box_title {
   margin-top: 5rem;
+}
+
+.aboutus_box_title p {
+  color: var(--text-100);
 }
 
 .aboutus_box_title h2 {
@@ -621,6 +631,8 @@ div#phone-input input {
   gap: 2rem;
   overflow-x: auto;
 }
+
+
 
 .aboutus_box_founder_box_image {
   background-color: var(--primary-300);
